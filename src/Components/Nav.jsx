@@ -24,7 +24,7 @@ const Nav = () => {
       <div className=" w-[80%]">
         {distinct_cat.map((c, i) => {
           return (
-            <Link key={i} to={`/?category=${c}`} className="flex items-center mb-3">
+            <Link key={i} to={`/testproducts/?category=${c}`} className="flex items-center mb-3">
               {' '}
               <span
                 style={{ backgroundColor: color() }}
