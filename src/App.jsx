@@ -9,17 +9,17 @@ const App = () => {
   const { search, pathname } = useLocation();
   return (
     <div className="h-screen w-screen flex">
-      {pathname != '/' &&
+      {pathname != '/testproducts/' &&
         (search.length > 0 || (
-          <Link to="/" className="text-red-300 text-xl absolute left-[17%] top-[3%]">
+          <Link to="/testproducts/" className="text-red-300 text-xl absolute left-[17%] top-[3%]">
             Home
           </Link>
         ))}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/create" element={<Create />} />
-        <Route path="/details/:id" element={<Details />} />
-        <Route path="/edit/:id" element={<Edit />} />
+        <Route path="/testproducts/" element={<Home />} />
+        <Route path="/testproducts/create" element={<Create />} />
+        <Route path="/testproducts/details/:id" element={<Details />} />
+        <Route path="/testproducts/edit/:id" element={<Edit />} />
       </Routes>
     </div>
   );
