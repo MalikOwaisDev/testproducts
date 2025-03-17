@@ -21,7 +21,7 @@ const Details = () => {
     const filteredProducts = products.filter((p) => p.id !== id);
     setProducts(filteredProducts);
     localStorage.setItem('products', JSON.stringify(filteredProducts));
-    Navigate('/testproducts/');
+    Navigate('/');
   };
 
   return product ? (
@@ -32,7 +32,7 @@ const Details = () => {
         <h3 className="text-zinc-500 my-5">{product.category}</h3>
         <h2 className="text-red-400 mb-3">{product.price}</h2>
         <p className="mb-6">{product.description}</p>
-        <Link to={`/testproducts/edit/${product.id}`} className="hover:cursor-pointer py-2 mr-5 px-5 border rounded border-blue-400 text-blue-400">
+        <Link to={`/edit/${product.id}`} className="hover:cursor-pointer py-2 mr-5 px-5 border rounded border-blue-400 text-blue-400">
           Edit{' '}
         </Link>
         <button
