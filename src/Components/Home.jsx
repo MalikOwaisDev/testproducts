@@ -12,7 +12,7 @@ const Home = () => {
 
   const getProductsCategory = async () => {
     try {
-      const { data } = await axios.get(`/products/category/${category}`);
+      const { data } = await axios.get(`/testproducts/products/category/${category}`);
       setfilteredProducts(data);
     } catch (error) {
       console.log(error);
@@ -34,7 +34,7 @@ const Home = () => {
             return (
               <Link
                 key={i}
-                to={`/details/${p.id}`}
+                to={`/testproducts/details/${p.id}`}
                 className="card p-3 border shadow rounded w-[18%] h-[30vh] flex flex-col justify-center items-center"
               >
                 <div
