@@ -1,5 +1,6 @@
 {
   "name": "react-first-vite",
+  "homepage": "https://malikowaisdev.github.io/testproducts/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,12 +8,15 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy":"gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.4",
     "@tailwindcss/vite": "^4.0.4",
     "axios": "^1.8.3",
+    "gh-pages": "^6.3.0",
     "nanoid": "^5.1.4",
     "postcss": "^8.5.1",
     "react": "^19.0.0",
